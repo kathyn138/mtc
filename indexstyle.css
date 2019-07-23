@@ -1,0 +1,143 @@
+@font-face {
+    font-family: leagueFont; 
+    src: url(beaufort-bold.ttf);
+}
+body {
+    background-image: url('SRFull.jpg');
+    background-repeat: no-repeat;
+    background-size:  cover;
+    background-position: center;
+
+    font-family: leagueFont;
+    color: #FFF88C;
+    min-height: 100vh;
+}
+img {
+    max-width: 60%; 
+    height: auto;
+    margin-top: 37px;
+}
+.container {
+    max-width: 90%;
+}
+.score-rectangle {
+    position: absolute;
+    width: 450px;
+    height: 43px;
+    top: 0px;
+    right: 0px;
+    background: linear-gradient(270deg, rgba(11, 32, 28, 0.63) 64.37%, rgba(11, 32, 28, 0) 101.78%);
+}
+.best-score { 
+    position: absolute;
+    top: 20%;
+    left: 50%; 
+}
+.current-score {
+    color: #CCCCCC;
+    position: absolute;
+    left: 20%;
+    top: 20%;
+}
+#first-row {
+    margin-top: 43px; 
+    height: 30vh;
+    width: 90vw;
+} 
+#second-row, #third-row {
+    height: 30vh; 
+    width: 90vw;
+}
+
+
+.flip-card-scene {
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+    perspective: 1000px; 
+ 
+}
+/* container to position front and back side */
+.flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+/* horizontal flip */
+.flip-card.is-flipped, .is-match {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.flip-card-back {
+    transform: rotateY(180deg);
+  }
+
+
+
+@media screen and (max-width: 1000px){
+    img {
+        max-width: 70%;
+    }
+}
+@media screen and (max-width: 875px){
+    img {
+        max-width: 80%;
+    }
+}
+@media screen and (max-width: 775px){
+    img {
+        max-width: 90%;
+    }
+}
+@media screen and (max-width: 576px){
+    #first-row {
+        margin-top: 30px;
+        height: 60vh;
+    }
+    #second-row, #third-row {
+        height: 60vh; 
+    }
+    body {
+        min-height: 190vh; 
+    }
+}
+@media screen and (max-width: 450px){
+    #first-row, #second-row, #third-row {
+        height: 50vh; 
+    }
+    body {
+        min-height: 160vh; 
+    }
+}
+@media screen and (max-width: 400px){
+    #first-row, #second-row, #third-row {
+        height: 40vh; 
+    }
+    body {
+        min-height: 130vh; 
+    }
+    .best-score {
+        left: 60%;
+    }
+    .current-score {
+        left: 30%;
+    }
+}
+@media screen and (max-width: 350px){
+    .best-score {
+        font-size: 15px;
+        left: 65%;
+    }
+    .current-score {
+        font-size: 15px; 
+        left: 40%;
+    }
+}

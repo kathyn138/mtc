@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Match That Champion</title>
+    <link rel="icon" href="favicon.png"/>
+    <link rel="preload" href="SRFull.jpg" as="image">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="indexstyle.css">
+</head>
+<body>
+    <audio id="welcome">
+        <source src='welcometosr.wav' type='audio/wav'>
+    </audio>
+    <audio id="victory">
+        <source src='victory.wav' type='audio/wav'>
+    </audio>
+
+    <div class="score-rectangle">
+        <span class="current-score">Score: </span>
+        <span class="best-score">Best Score: </span>
+    </div>
+   
+    <div class="container" id="deck">
+        
+        <div class="row justify-content-center" id="first-row">
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center card-container">
+                <div class="flip-card-scene">
+                    <div class="flip-card">
+                        <div class="flip-card-front">
+                            <div>
+                            <img src="cardback.png" alt="Ahri"></div>
+                        </div>
+                        <div class="flip-card-back">
+                           <img src="ahri.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center card-container">
+                <div class="flip-card-scene">
+                    <div class="flip-card">
+                        <div class="flip-card-front">
+                            <img src="cardback.png" alt="Blitzcrank">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="blitzcrank.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center card-container">
+                <div class="flip-card-scene">
+                    <div class="flip-card">
+                        <div class="flip-card-front">
+                            <img src="cardback.png" alt="Ezreal">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="ezreal.png">
+                        </div>
+                        </div>
+                    </div>
+            </div>
+            
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center card-container">
+                <div class="flip-card-scene">
+                    <div class="flip-card">
+                        <div class="flip-card-front">
+                            <img src="cardback.png" alt="Garen">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="garen.png">
+                        </div>
+                        </div>
+                    </div>
+            </div>
+            
+
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center card-container">
+                <div class="flip-card-scene">
+                    <div class="flip-card">
+                        <div class="flip-card-front">
+                            <img src="cardback.png" alt="Lux">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="lux.png">
+                        </div>
+                        </div>
+                    </div>
+            </div>
+            
+
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center card-container">
+                <div class="flip-card-scene">
+                    <div class="flip-card">
+                        <div class="flip-card-front">
+                            <img src="cardback.png" alt="Yasuo">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="yasuo.png">
+                        </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+    
+
+        <div class="row justify-content-center" id="second-row">
+
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center card-container">
+                <div class="flip-card-scene">
+                    <div class="flip-card">
+                        <div class="flip-card-front">
+                            <img src="cardback.png" alt="Neeko">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="neeko.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center card-container">
+                <div class="flip-card-scene">
+                    <div class="flip-card">
+                        <div class="flip-card-front">
+                            <img src="cardback.png" alt="Teemo">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="teemo.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center card-container">
+                <div class="flip-card-scene">
+                    <div class="flip-card">
+                        <div class="flip-card-front">
+                            <img src="cardback.png" alt="Yuumi">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="yuumi.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center card-container">
+                <div class="flip-card-scene">
+                    <div class="flip-card">
+                        <div class="flip-card-front">
+                            <img src="cardback.png" alt="Ahri">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="ahri.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center card-container">
+                <div class="flip-card-scene">
+                    <div class="flip-card">
+                        <div class="flip-card-front">
+                            <img src="cardback.png" alt="Neeko">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="neeko.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center card-container">
+                <div class="flip-card-scene">
+                    <div class="flip-card">
+                        <div class="flip-card-front">
+                            <img src="cardback.png" alt="Ezreal">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="ezreal.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="row justify-content-center" id="third-row">
+
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center card-container">
+                <div class="flip-card-scene">
+                    <div class="flip-card">
+                        <div class="flip-card-front">
+                            <img src="cardback.png" alt="Garen">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="garen.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center card-container">
+                <div class="flip-card-scene">
+                    <div class="flip-card">
+                        <div class="flip-card-front">
+                            <img src="cardback.png" alt="Blitzcrank">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="blitzcrank.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center card-container">
+                <div class="flip-card-scene">
+                    <div class="flip-card">
+                        <div class="flip-card-front">
+                            <img src="cardback.png" alt="Teemo">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="teemo.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center card-container">
+                <div class="flip-card-scene">
+                    <div class="flip-card">
+                        <div class="flip-card-front">
+                            <img src="cardback.png" alt="Yasuo">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="yasuo.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center card-container">
+                <div class="flip-card-scene">
+                    <div class="flip-card">
+                        <div class="flip-card-front">
+                            <img src="cardback.png" alt="Yuumi">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="yuumi.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center card-container">
+                <div class="flip-card-scene">
+                    <div class="flip-card">
+                        <div class="flip-card-front">
+                            <img src="cardback.png" alt="Lux">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="lux.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
